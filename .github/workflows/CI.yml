@@ -19,7 +19,7 @@ jobs:
         run: echo ${{ github.ref }}
         
       - name: Install yarn
-        run: npm install --global yarn
+        run: sudo npm install --global yarn
 
       - name: Print yarn version
         run: yarn -v
