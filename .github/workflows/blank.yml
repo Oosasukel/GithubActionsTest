@@ -14,10 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print github.ref
+        # format: refs/heads/<branch_name>, this runs only on develop branch
+        if: ${{ github.ref == 'refs/heads/develop' }}
         run: echo ${{ github.ref }}
-
-      - name: Print github
-        run: echo ${{ github }}
 
       - name: Print node version
         run: node -v
