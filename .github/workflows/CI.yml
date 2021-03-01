@@ -17,9 +17,6 @@ jobs:
         # format: refs/heads/<branch_name>
         # Condition to run only on develop branch -> if: ${{ github.ref == 'refs/heads/develop' }}
         run: echo ${{ github.ref }}
-        
-      - name: Install yarn
-        run: sudo npm install --global yarn
 
       - name: Print yarn version
         run: yarn -v
